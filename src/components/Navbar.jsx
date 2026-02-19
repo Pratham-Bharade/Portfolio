@@ -28,19 +28,43 @@ function Navbar({ darkMode, setDarkMode }) {
   }, []);
 
   return (
-    <nav className="navbar" style={{
-    background: darkMode ? "rgba(30, 41, 59, 0.8)" : "#e2e8f0",
-    transition: "0.3s ease",
-  }}>
+    <nav
+      className="navbar"
+      // style={{
+      //   background: darkMode
+      //     ? "rgba(30, 41, 59, 0.8)"
+      //     : "rgba(255,255,255,0.8)",
+      //   transition: "0.3s ease",
+      // }}
+    >
       <div className="logo">Prathamesh</div>
-      <div
-        className="hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </div>
 
+      {/* Hamburger */}
+     <div
+  className={`hamburger ${menuOpen ? "hide" : ""}`}
+  onClick={() => setMenuOpen(true)}
+>
+  ☰
+</div>
+
+      {menuOpen && (
+  <div
+    className="overlay"
+    onClick={() => setMenuOpen(false)}
+  ></div>
+)}
+
+      {/* Sidebar */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+
+        {/* Close Button */}
+        <span
+          className="close-btn"
+          onClick={() => setMenuOpen(false)}
+        >
+          ✕
+        </span>
+
         {["home", "about", "projects", "contact"].map((section) => (
           <li key={section}>
             <a
@@ -56,7 +80,10 @@ function Navbar({ darkMode, setDarkMode }) {
         <li>
           <button
             className="theme-toggle"
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={() => {
+              setDarkMode(!darkMode);
+              setMenuOpen(false); // auto close
+            }}
           >
             {darkMode ? "☀ Light" : "🌙 Dark"}
           </button>

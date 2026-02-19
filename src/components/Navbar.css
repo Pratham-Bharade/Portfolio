@@ -12,29 +12,20 @@
 
   padding: 18px 60px;
 
-  background: rgba(30, 41, 59, 0.8); /* dark glass */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
   border-bottom: 1px solid var(--border);
   z-index: 1000;
-
-  transition: 0.3s ease;
 }
 
-/* Light mode navbar */
-body.light .navbar {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-/* Logo */
 .logo {
   font-size: 20px;
   font-weight: bold;
   color: var(--text);
 }
 
-/* Links */
+/* Desktop Links */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -49,12 +40,10 @@ body.light .navbar {
   position: relative;
 }
 
-/* Hover */
 .nav-links a:hover {
   color: var(--accent);
 }
 
-/* Active link */
 .nav-links a.active {
   color: var(--accent);
 }
@@ -69,8 +58,7 @@ body.light .navbar {
   background-color: var(--accent);
 }
 
-/* ================= THEME TOGGLE ================= */
-
+/* Theme Toggle */
 .theme-toggle {
   padding: 6px 14px;
   border-radius: 20px;
@@ -85,9 +73,36 @@ body.light .navbar {
   background: var(--accent);
   color: white;
 }
+/* Overlay background */
+/* .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+} */
 
-/* ================= HAMBURGER ================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 
+  background: rgba(0, 0, 0, 0.6);  /* darker background */
+  backdrop-filter: blur(4px);      /* smooth blur effect */
+  -webkit-backdrop-filter: blur(4px);
+
+  z-index: 1050;
+}
+
+
+
+
+/* Hide hamburger when menu is open */
+/* Hide hamburger on desktop */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -95,7 +110,14 @@ body.light .navbar {
   color: var(--text);
 }
 
+
+
 /* ================= MOBILE ================= */
+
+/* Hide close button on desktop */
+.close-btn {
+  display: none;
+}
 
 @media (max-width: 768px) {
 
@@ -104,22 +126,55 @@ body.light .navbar {
   }
 
   .nav-links {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0;
     right: 0;
-    background: var(--card-bg);
+
+    width: 260px;
+    height: 100vh;
+
+ background: var(--footer-bg);
+
     border-left: 1px solid var(--border);
 
     flex-direction: column;
-    width: 220px;
-    padding: 25px;
-    gap: 20px;
+    align-items: flex-start;
+    padding: 80px 30px 30px 30px;
+    gap: 25px;
 
     transform: translateX(100%);
     transition: transform 0.3s ease;
+
+    z-index: 1100;
   }
 
   .nav-links.open {
     transform: translateX(0);
   }
+
+  .close-btn {
+    display: block;   /* 👈 ADD THIS LINE */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text);
+  }
+}
+
+/* Default = Dark mode */
+.navbar {
+  background: rgba(30, 41, 59, 0.8);
+  transition: 0.3s ease;
+}
+
+/* Light mode */
+body.light .navbar {
+  background: #e2e8f0;
+}
+
+/* Dark mode */
+body.dark .navbar {
+  background: rgba(30, 41, 59, 0.8);
 }
