@@ -7,7 +7,7 @@ function Navbar({ darkMode, setDarkMode }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["home", "about", "projects", "skills","education", "contact"];
       let current = "home";
 
       sections.forEach((section) => {
@@ -65,7 +65,7 @@ function Navbar({ darkMode, setDarkMode }) {
           ✕
         </span>
 
-        {["home", "about", "projects", "contact"].map((section) => (
+        {["home", "about", "projects", "skills","education", "contact"].map((section) => (
           <li key={section}>
             <a
               href={`#${section}`}

@@ -1,0 +1,173 @@
+.education {
+  padding: 80px 5% 100px;
+  text-align: center;
+  position: relative;
+}
+.education-title {
+  font-size: 36px;
+  margin-bottom: 80px;
+  color: var(--text);
+}
+
+.journey-container {
+  position: relative;
+  width: 100%;
+  height: 380px;     
+}
+/* ===== SOLID LINE CONNECTING POINTS ===== */
+
+
+.route-path {
+  fill: none;
+  stroke: #000;      
+  stroke-width: 3;   
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.journey-svg {
+  position: absolute;
+  top: -110px; 
+  left: 0;
+  width: 100%;
+  height: 250px;
+  z-index: 0;
+}
+/* ================= CHECKPOINT ================= */
+
+.checkpoint {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1;
+}
+
+/* 
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: 0.3s ease;
+   top : -190px; 
+} 
+*/
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+
+.checkpoint.active .dot {
+  background: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* ================= MAP STYLE CARD ================= */
+
+.info-card {
+  width: 230px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 120px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* small triangle pointer like map marker */
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--card-bg);
+}
+
+/* Image */
+.info-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.info-card h4 {
+  margin: 5px 0;
+  color: var(--text);
+}
+
+.info-card span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.info-card h5 {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.info-card p {
+  font-size: 13px;
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.checkpoint:hover .dot {
+  transform: scale(1.2);
+  background: var(--accent);
+}
+
+.checkpoint:hover .info-card {
+  transform: translateY(-10px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .journey-container {
+    padding-top: 0;
+  }
+
+  .journey-svg {
+    display: none;
+  }
+
+  .checkpoint {
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none;
+    margin-bottom: 50px;
+  }
+
+  .dot {
+    margin-bottom: 15px;
+    transform: none;
+  }
+
+  .info-card {
+    margin-top: 0;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
