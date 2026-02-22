@@ -42,18 +42,6 @@
   z-index: 1;
 }
 
-/* 
-.dot {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 50%;
-  margin: 0 auto;
-  transition: 0.3s ease;
-   top : -190px; 
-} 
-*/
 .dot {
   width: 20px;
   height: 20px;

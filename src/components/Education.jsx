@@ -9,38 +9,39 @@ function Education() {
  const journey = [
   {
     title: "10th",
-    year: "2018",
-    place: "ABC High School",
+    year: "MARCH-2019",
+    place: "Shree Nageshwer Secondary School",
     description: "Completed secondary education with strong academic foundation.",
     image: school,
-    left: "9%",   // was 5%
+    left: "9%",  
     top: "80px",
   },
   {
     title: "12th",
-    year: "2020",
-    place: "XYZ Junior College",
+    year: "MARCH-2022",
+    place: "Dnyanbhaki Junior College,Alandi",
     description: "Focused on science stream and core fundamentals.",
     image: college,
-    left: "35%",  // was 30%
+    left: "35%", 
     top: "13px",
   },
   {
     title: "Bachelor's Degree",
-    year: "2023",
-    place: "University Name",
+    year: "2025",
+    place: "MES Abasaheb Garware college,Pune",
+    University : "Savitribai Phule Pune University",
     description: "Completed graduation in Computer Science.",
     image: degree,
-    left: "64%",  // was 60%
+    left: "64%", 
     top: "16px",
   },
   {
     title: "MSc (Current)",
-    year: "2024 - Present",
-    place: "University Name",
-    description: "Pursuing Master's with specialization.",
+    year: "2026 - Present",
+    place: "Savitibai Phule Pune University",
+    description: "Edit and add university name",
     image: master,
-    left: "91%",  // was 90% or 98%
+    left: "91%",  
      top: "3px",
     active: true,
   },
