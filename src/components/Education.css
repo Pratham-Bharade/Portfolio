@@ -142,9 +142,14 @@
 
 @media (max-width: 768px) {
 
+
+
   .journey-container {
-    padding-top: 0;
+    height: auto;        /* 🔥 Important */
+    padding-bottom: 40px;
   }
+
+
 
   .journey-svg {
     display: none;
