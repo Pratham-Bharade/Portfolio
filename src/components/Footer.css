@@ -2,35 +2,33 @@
 
 .footer {
   padding: 70px 20px 25px;
-  background: var(--footer-bg);  /* 👈 changed */
+  background: var(--footer-bg);
   border-top: 1px solid var(--border);
   transition: background 0.3s ease;
 }
 
-
 .footer-container {
-  max-width: 500px;   /* 👈 reduced from 1200 */
+  max-width: 800px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
 }
 
-
-
-/* Make columns equal width on desktop */
 .footer-brand,
 .footer-links,
 .footer-social {
   flex: 1;
 }
 
-/* Brand Section */
 .footer-brand h3 {
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+body.dark .footer-brand h3 {
+  color: #f8fafc;
 }
 
 .footer-brand p {
@@ -38,56 +36,68 @@
   font-size: 14px;
 }
 
-/* Links */
-.footer-links,
-.footer-social {
+.footer-action {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
 }
 
-.footer-links a,
-.footer-social a {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 14px;
-  transition: 0.3s ease;
+.back-to-top-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #475569;
+  background: linear-gradient(145deg, #334155, #1e293b);
+  color: #f8fafc;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.footer-links a:hover,
-.footer-social a:hover {
-  color: var(--accent);
+.back-to-top-btn:hover {
+  background: var(--shiny-silver);
+  color: #0a0e14;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: #ffffff;
 }
 
-/* Bottom Copyright */
 .footer-bottom {
-  margin-top: 50px;
-  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--muted);
   font-size: 14px;
   border-top: 1px solid var(--border);
   padding-top: 20px;
 }
 
-/* ================= MOBILE ================= */
+.footer-social-minimal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social-minimal a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social-minimal a:hover {
+  color: var(--accent);
+}
 
 @media (max-width: 768px) {
-
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 35px;
+    gap: 25px;
   }
 
-  .footer-brand,
-  .footer-links,
-  .footer-social {
-    flex: unset;
-  }
-
-  .footer-links,
-  .footer-social {
-    align-items: center;
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
 }

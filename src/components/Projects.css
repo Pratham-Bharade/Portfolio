@@ -1,4 +1,4 @@
- /* ================= PROJECT SECTION ================= */
+/* ================= PROJECT SECTION ================= */
 
 .projects {
   padding: 100px 20px;
@@ -23,45 +23,78 @@
 
 /* Card */
 .project-card {
-  padding: 40px;
+  padding: 30px 0;
   border-radius: 14px;
-  width: 400px;
-
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
   border: 1.5px solid var(--border);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-
   transition: all 0.3s ease;
+}
+
+.project-card h3 {
+  padding: 0 20px;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  padding: 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.tech-tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: rgba(197, 168, 128, 0.1);
+  color: #c5a880;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.dark .tech-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 /* Light mode only */
 body.light .project-card {
-  background: #e2e8f0;
+  background: var(--footer-bg);
 }
 
+/* Dark Mode */
 body.dark .project-card {
-  background: #223046;   /* slightly lighter than #0f172a */
+  background: linear-gradient(145deg, #0a0a0a, #000000);
+  border: 1px solid #4b5563;
+}
+
+body.dark .project-card:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
 /* Hover */
 .project-card:hover {
   transform: translateY(-8px);
-
   border-color: var(--accent);
-
   box-shadow: 0 18px 45px rgba(59, 130, 246, 0.25);
-}
-
-/* Title */
-.project-card h3 {
-  color: var(--text);
-  margin-bottom: 15px;
-}
-
-/* Description */
-.project-card p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 25px;
 }
 
 /* Buttons container */
@@ -69,22 +102,33 @@ body.dark .project-card {
   display: flex;
   justify-content: center;
   gap: 15px;
+  padding: 0 20px;
 }
 
-/* Buttons */
 .project-buttons button {
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text);
-  cursor: pointer;  
-  font-weight: 500;
-  transition: 0.3s ease;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #c5a880;
+  background: transparent;
+  color: #c5a880;
 }
 
 .project-buttons button:hover {
-  background: var(--accent);
-  color: rgb(36, 193, 232);
-  transform: translateY(-2px);
+  background: #c5a880;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+body.dark .project-buttons button {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body.dark .project-buttons button:hover {
+  background: #ffffff;
+  color: #000000;
 }

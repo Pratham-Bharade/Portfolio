@@ -11,18 +11,18 @@
   align-items: center;
 
   padding: 18px 60px;
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid var(--border);
   z-index: 1000;
+  transition: all 0.5s ease;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
   color: var(--text);
+}
+
+body.dark .logo {
+  color: #f8fafc;
 }
 
 /* Desktop Links */
@@ -73,16 +73,6 @@
   background: var(--accent);
   color: white;
 }
-/* Overlay background */
-/* .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1050;
-} */
 
 .overlay {
   position: fixed;
@@ -98,10 +88,6 @@
   z-index: 1050;
 }
 
-
-
-
-/* Hide hamburger when menu is open */
 /* Hide hamburger on desktop */
 .hamburger {
   display: none;
@@ -109,8 +95,6 @@
   cursor: pointer;
   color: var(--text);
 }
-
-
 
 /* ================= MOBILE ================= */
 
@@ -120,6 +104,9 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 18px 20px;
+  }
 
   .hamburger {
     display: block;
@@ -133,7 +120,7 @@
     width: 260px;
     height: 100vh;
 
- background: var(--footer-bg);
+    background: var(--footer-bg);
 
     border-left: 1px solid var(--border);
     
@@ -153,7 +140,7 @@
   }
 
   .close-btn {
-    display: block;   /* 👈 ADD THIS LINE */
+    display: block;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -165,16 +152,24 @@
 
 /* Default = Dark mode */
 .navbar {
-  background: rgba(30, 41, 59, 0.8);
+  background: transparent;
+  border-bottom: 1px solid transparent;
   transition: 0.3s ease;
 }
 
+.navbar.scrolled {
+  background: rgba(30, 41, 59, 0.8);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
 /* Light mode */
-body.light .navbar {
-  background:#9ce3ff  ;
+body.light .navbar.scrolled {
+  background: var(--navbar-bg);
 }
 
 /* Dark mode */
-body.dark .navbar {
-  background: rgba(30, 41, 59, 0.8);
+body.dark .navbar.scrolled {
+  background: rgba(10, 14, 20, 0.85);
+  border-bottom-color: rgba(148, 163, 184, 0.2);
 }

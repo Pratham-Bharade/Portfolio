@@ -1,13 +1,20 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 
-function Navbar({ darkMode, setDarkMode }) {
+interface NavbarProps {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+}
+
+function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "skills","education", "contact"];
+      setScrolled(window.scrollY > 50);
+      const sections = ["home", "about", "skills", "projects", "education", "contact"];
       let current = "home";
 
       sections.forEach((section) => {
@@ -28,44 +35,29 @@ function Navbar({ darkMode, setDarkMode }) {
   }, []);
 
   return (
-    <nav
-      className="navbar"
-      // style={{
-      //   background: darkMode
-      //     ? "rgba(30, 41, 59, 0.8)"
-      //     : "rgba(255,255,255,0.8)",
-      //   transition: "0.3s ease",
-      // }}
-    >
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">Prathamesh</div>
 
       {/* Hamburger */}
-     <div
-  className={`hamburger ${menuOpen ? "hide" : ""}`}
-  onClick={() => setMenuOpen(true)}
->
-  ☰
-</div>
+      <div
+        className={`hamburger ${menuOpen ? "hide" : ""}`}
+        onClick={() => setMenuOpen(true)}
+      >
+        ☰
+      </div>
 
       {menuOpen && (
-  <div
-    className="overlay"
-    onClick={() => setMenuOpen(false)}
-  ></div>
-)}
+        <div className="overlay" onClick={() => setMenuOpen(false)}></div>
+      )}
 
       {/* Sidebar */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-
         {/* Close Button */}
-        <span
-          className="close-btn"
-          onClick={() => setMenuOpen(false)}
-        >
+        <span className="close-btn" onClick={() => setMenuOpen(false)}>
           ✕
         </span>
 
-        {["home", "about", "projects", "skills","education", "contact"].map((section) => (
+        {["home", "about", "skills", "projects", "education", "contact"].map((section) => (
           <li key={section}>
             <a
               href={`#${section}`}

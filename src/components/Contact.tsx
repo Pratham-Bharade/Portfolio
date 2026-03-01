@@ -1,9 +1,9 @@
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 function Contact() {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -11,17 +11,20 @@ function Contact() {
   const [emailError, setEmailError] = useState(false);
 
   useEffect(() => {
+    // Note: User should replace with their own public key in production
     emailjs.init("9CaouynAaDJa2R2Si");
   }, []);
 
-  const validateEmail = (email) => {
+  const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const emailValue = form.current.email.value;
+    if (!form.current) return;
+
+    const emailValue = (form.current.elements.namedItem("email") as HTMLInputElement).value;
 
     if (!validateEmail(emailValue)) {
       setEmailError(true);
@@ -36,7 +39,7 @@ function Contact() {
       .then(() => {
         setSuccess(true);
         setToast(true);
-        form.current.reset();
+        form.current?.reset();
 
         setTimeout(() => {
           setSuccess(false);
@@ -53,13 +56,11 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h2 className="contact-title">Contact Me</h2>
+      <h2 className="contact-title shiny-text">Contact Me</h2>
       <h5 className="contact-tagline">Let’s discuss how I can contribute to your team</h5>
 
       <div className="contact-container">
-
         <form ref={form} onSubmit={sendEmail} className="contact-form glass">
-
           <div className="input-group">
             <input type="text" name="name" required />
             <label>Name</label>
@@ -71,7 +72,7 @@ function Contact() {
           </div>
 
           <div className="input-group">
-            <textarea name="message" rows="4" required></textarea>
+            <textarea name="message" rows={4} required></textarea>
             <label>Message</label>
           </div>
 
@@ -92,12 +93,15 @@ function Contact() {
         <div className="social-card glass">
           <h3>Connect With Me</h3>
           
+          <div className="contact-info">
+            <p><strong>Mobile:</strong> +91 9322228426</p>
+            <p><strong>Email:</strong> prathambharade@gmail.com</p>
+          </div>
 
           <div className="social-links">
             <button onClick={() => window.open("https://github.com/pratham-bharade", "_blank")}> GitHub </button>
-
             <button onClick={() => window.open("https://linkedin.com/in/prathamesh-bharade-02694428b", "_blank")}>LinkedIn</button>
-            <button onClick={() => window.open("https://github.com/pratham-bharade", "_blank")}>Instagram</button>
+            <button onClick={() => window.open("https://instagram.com/pratham_bharade", "_blank")}>Instagram</button>
           </div>
         </div>
       </div>

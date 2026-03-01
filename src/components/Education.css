@@ -14,8 +14,6 @@
   width: 100%;
   height: 380px;     
 }
-/* ===== SOLID LINE CONNECTING POINTS ===== */
-
 
 .route-path {
   fill: none;
@@ -33,7 +31,6 @@
   height: 250px;
   z-index: 0;
 }
-/* ================= CHECKPOINT ================= */
 
 .checkpoint {
   position: absolute;
@@ -52,13 +49,26 @@
   transition: 0.3s ease;
 }
 
+/* DARK MODE - Timeline line */
+body.dark .route-path {
+  stroke: #94a3b8;
+  filter: drop-shadow(0 0 5px rgba(148, 163, 184, 0.5));
+}
 
+/* DARK MODE - Dot border */
+body.dark .dot {
+  border: 3px solid #ffffff;
+  background: var(--card-bg);
+}
+
+/* Optional: make active glow stronger in dark */
+body.dark .checkpoint.active .dot {
+  box-shadow: 0 0 20px var(--accent);
+}
 .checkpoint.active .dot {
   background: var(--accent);
   box-shadow: 0 0 20px var(--accent);
 }
-
-/* ================= MAP STYLE CARD ================= */
 
 .info-card {
   width: 230px;
@@ -72,7 +82,6 @@
   transition: 0.3s ease;
 }
 
-/* small triangle pointer like map marker */
 .info-card::before {
   content: "";
   position: absolute;
@@ -84,7 +93,6 @@
   border-bottom: 10px solid var(--card-bg);
 }
 
-/* Image */
 .info-card img {
   width: 60px;
   height: 60px;
@@ -92,7 +100,6 @@
   margin-bottom: 10px;
 }
 
-/* Text */
 .info-card h4 {
   margin: 5px 0;
   color: var(--text);
@@ -115,8 +122,6 @@
   color: var(--muted);
 }
 
-/* ================= HOVER EFFECT ================= */
-
 .checkpoint:hover .dot {
   transform: scale(1.2);
   background: var(--accent);
@@ -126,18 +131,25 @@
   transform: translateY(-10px);
 }
 
-/* ================= RESPONSIVE ================= */
+body.light .info-card {
+  background: var(--footer-bg);
+}
+
+/* Dark mode */
+body.dark .info-card {
+  background: linear-gradient(145deg, #0a0a0a, #000000);
+  border: 1px solid #4b5563;
+}
+
+body.dark .info-card::before {
+  border-bottom-color: #0a0a0a;
+}
 
 @media (max-width: 768px) {
-
-
-
   .journey-container {
-    height: auto;        /* 🔥 Important */
+    height: auto;
     padding-bottom: 40px;
   }
-
-
 
   .journey-svg {
     display: none;
