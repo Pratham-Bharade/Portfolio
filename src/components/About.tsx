@@ -3,42 +3,66 @@ import "./About.css";
 function About() {
   return (
     <section className="about" id="about">
-      <h1 className="shiny-text">About Me</h1>
 
-      <h3 className="about-tagline">
-        I'm a passionate developer focused on building clean, scalable, and
-        user-friendly web applications. I enjoy solving real-world problems
-        and continuously learning new technologies.
-      </h3>
+      <div className="about-container">
 
-      <div className="about-content">
-        <p>
-          I completed my graduation from MES Abasaheb Garware College and am currently
-          pursuing my postgraduate degree in MSc Computer Applications (MSc CA).
-          My academic journey has helped me build a strong foundation in software
-          development, data structures, and system design.
-        </p>
+        <div className="about-header">
+          <span className="about-label">WHO I AM</span>
+          <h1 className="about-heading">
+            Building Digital Solutions With
+            <br />
+            Precision & Purpose
+          </h1>
+        </div>
 
-        <p>
-          I have hands-on experience in full-stack development using HTML, CSS,
-          JavaScript, Express.js, Node.js, and MySQL. Along with this, I am
-          proficient in programming languages such as C, C++, Java, and Python,
-          which strengthen my problem-solving and logical thinking skills.
-        </p>
+        <div className="about-content">
 
-        <p>
-          During my undergraduate studies, I developed an Attendance Module project
-          that focused on efficient data handling and system organization.
-          Currently, I am working on a Placement Cell Management project,
-          where I am involved in backend development and database management.
-        </p>
+          {/* LEFT SIDE */}
+          <div className="about-left">
+  <p>
+    With a solid background in Computer Applications, I have developed strong 
+    expertise in C, C++, Java, Python, SQL, and modern web development.
+  </p>
 
-        <p>
-          Apart from technical skills, I focus on writing clean code, maintaining
-          good project structure, and continuously improving my development practices.
-          I believe in consistent learning, teamwork, and adapting to new technologies
-          to grow both personally and professionally.
-        </p>
+  <p>
+    My active involvement in sports has shaped my communication skills, 
+    teamwork, and ability to coordinate effectively within groups — qualities 
+    that translate directly into collaborative software development.
+  </p>
+
+  <p>
+    I approach every project with discipline, clarity, and a mindset focused 
+    on both technical excellence and team success.
+  </p>
+</div>
+
+          {/* RIGHT SIDE */}
+          <div className="about-right">
+
+            <div className="about-box">
+              <h3>Education</h3>
+              <p>MSc Computer Applications</p>
+            </div>
+
+            <div className="about-box">
+              <h3>Experience</h3>
+              <p>Full‑Stack Web Projects</p>
+            </div>
+
+            <div className="about-box">
+              <h3>Core Strength</h3>
+              <p>Backend Systems & Database Design</p>
+            </div>
+
+            <div className="about-box">
+              <h3>Mindset</h3>
+              <p>Consistency • Learning • Innovation</p>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   );

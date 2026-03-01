@@ -1,54 +1,105 @@
 .about {
-  padding: 80px 20px;
-  max-width: 900px;
+  padding: 120px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
   margin: auto;
+}
+
+/* HEADER */
+.about-header {
   text-align: center;
+  margin-bottom: 70px;
 }
 
-/* Heading */
-.about h1 {
-  font-size: 40px;
-  margin-bottom: 25px;
+.about-label {
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: #c5a880;
+  font-weight: 600;
+}
+
+.about-heading {
+  font-size: 48px;
   font-weight: 700;
+  margin-top: 20px;
+  line-height: 1.2;
   color: var(--text);
 }
 
-/* Tagline */
-.about-tagline {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 35px;
-  color: var(--muted);
-  line-height: 1.6;
+/* CONTENT GRID */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: start;
 }
 
-/* Paragraphs */
-.about p {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 22px;
+/* LEFT SIDE */
+.about-left p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 30px;
   color: var(--muted);
-  text-align: justify;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Subtle hover effect */
-.about p:hover {
-  transform: translateY(-3px);
+.about-left p:hover {
   color: var(--text);
+  transform: translateY(-4px);
 }
 
-/* Responsive */
+/* RIGHT SIDE */
+.about-right {
+  display: grid;
+  gap: 25px;
+}
+
+.about-box {
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  border-color: #c5a880;
+}
+
+.about-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #c5a880;
+}
+
+.about-box p {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ================= */
+/* MOBILE RESPONSIVE */
+/* ================= */
+
 @media (max-width: 768px) {
-  .about h1 {
+
+  .about-heading {
     font-size: 32px;
   }
 
-  .about-tagline {
-    font-size: 18px;
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .about p {
+  .about-left p {
     font-size: 16px;
+  }
+
+  .about-box {
+    padding: 20px;
   }
 }

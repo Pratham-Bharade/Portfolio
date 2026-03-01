@@ -162,7 +162,7 @@ body.dark .portfolio-bg-text {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 30;
   pointer-events: none;
   animation: fadeIn 2s ease-out forwards;
 }
@@ -242,25 +242,26 @@ body.dark .portfolio-bg-text {
 
   /* NAME OVER IMAGE */
   .hero-name {
-    top: 38%;             /* Pulled downwards */
-    left: 35%;
-    transform: translateX(-50%) rotate(-4deg); /* Tilted */
-    font-size: 1.3rem;
+    top: 35%;             /* Pulled downwards */
+    left:27%;
+    transform: translateX(-50%) rotate(-4deg);
+    font-size: 1.1rem;
     text-align: center;
-    z-index: 8;
+    z-index: 10;
   }
 
-  .hero-year {
-    top: 8%;
-    right: 10%;
-    font-size: 2rem;
-    z-index: 6;
-  }
+ .hero-year {
+  position: absolute;
+  top: 13%;        /* was 8% → move downward closer to image */
+  right: 20%;       /* move slightly inward */
+  font-size: 2.5rem;  /* slightly bigger */
+  z-index: 40;
+}
 
   /* TEXT BELOW IMAGE */
   .hero-info {
     position: absolute;
-    bottom: 3%;           /* Moved slightly downwards again */
+    bottom: 7%;           /* Moved slightly downwards again */
     top: auto;
     left: 5%;
     width: 90%;
@@ -275,12 +276,12 @@ body.dark .portfolio-bg-text {
   }
 
   .info-role {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
   }
 
   .info-bio {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 20px;
     max-width: 280px;
