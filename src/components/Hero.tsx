@@ -1,5 +1,5 @@
 import "./Hero.css";
-
+import m2 from "./assets/m2.jpg";
 function Hero() {
   return (
     <section className="hero" id="home">
@@ -20,7 +20,7 @@ function Hero() {
         {/* Character Image */}
         <div className="character-wrapper">
           <img 
-           src={`${import.meta.env.BASE_URL}m2.jpg`}  
+           src={m2}  
             alt="Prathamesh Bharade" 
             className="character-img"
             referrerPolicy="no-referrer"
