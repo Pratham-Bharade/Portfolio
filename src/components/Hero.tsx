@@ -21,7 +21,7 @@ function Hero() {
         <div className="character-wrapper">
           <img 
            src={`${import.meta.env.BASE_URL}m2.jpg`}  
-            alt="Character Illustration" 
+            alt="Prathamesh Bharade" 
             className="character-img"
             referrerPolicy="no-referrer"
           />
