@@ -20,7 +20,7 @@ function Hero() {
         {/* Character Image */}
         <div className="character-wrapper">
           <img 
-           src="src\assets\m2.jpg" 
+           src={`${import.meta.env.BASE_URL}m2.jpg`}  
             alt="Character Illustration" 
             className="character-img"
             referrerPolicy="no-referrer"
