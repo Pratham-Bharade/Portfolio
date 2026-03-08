@@ -2,66 +2,134 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prathamesh Bharade - Resume</title>
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
-background:#f5f5f5;
+*{
 margin:0;
-padding:40px;
-color:#333;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+background:#d1d5db;   /* gray background */
+color:#000000;        /* black text */
+padding:40px 20px;
 }
 
 .container{
-max-width:900px;
+max-width:950px;
 margin:auto;
-background:white;
+background:#f3f4f6;   /* light gray resume card */
 padding:40px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1{
-margin-bottom:5px;
+/* Header */
+
+.header{
+display:flex;
+flex-direction:column;
+margin-bottom:30px;
 }
+
+.name{
+font-size:32px;
+font-weight:bold;
+color:#000;
+}
+
+.subtitle{
+color:#444;
+margin-top:5px;
+}
+
+.links{
+margin-top:10px;
+}
+
+.links a{
+color:#000;
+margin-right:15px;
+text-decoration:none;
+font-weight:500;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+/* Sections */
 
 .section{
-margin-top:30px;
+margin-top:35px;
 }
 
 .section h2{
-border-bottom:2px solid #000;
-padding-bottom:5px;
+color:#000;
 margin-bottom:15px;
+border-bottom:2px solid #9ca3af;
+padding-bottom:6px;
 }
 
-ul{
-padding-left:20px;
-}
-
-.back-btn{
-display:inline-block;
-margin-bottom:20px;
-padding:10px 18px;
-background:black;
-color:white;
-text-decoration:none;
-border-radius:6px;
-}
-
-.back-btn:hover{
-background:#444;
-}
+/* Skills */
 
 .skill-list span{
 display:inline-block;
-background:#eee;
-padding:6px 10px;
+background:#e5e7eb;
+padding:6px 12px;
 margin:5px;
-border-radius:5px;
+border-radius:6px;
 font-size:14px;
+transition:.3s;
+}
+
+.skill-list span:hover{
+background:#9ca3af;
+color:black;
+}
+
+/* Projects */
+
+.project{
+margin-bottom:20px;
+}
+
+.project h3{
+color:#000;
+margin-bottom:5px;
+}
+
+.project p{
+color:#333;
+font-size:14px;
+}
+
+/* Buttons */
+
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.btn{
+padding:12px 22px;
+background:#4b5563;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#1f2937;
 }
 
 </style>
@@ -71,16 +139,42 @@ font-size:14px;
 
 <div class="container">
 
-<a href="/Portfolio/" class="back-btn">← Back to Portfolio</a>
+<div class="header">
 
-<h1>Prathamesh Bharade</h1>
-<p><strong>Age:</strong> 22</p>
-<p>A passionate developer interested in building scalable web applications and solving real world problems using modern technologies.</p>
+<div>
+<div class="name">Prathamesh Bharade</div>
+<div class="subtitle">Full Stack Developer | Age 22</div>
+
+<div class="links">
+<a href="https://github.com/">GitHub</a>
+<a href="https://linkedin.com/">LinkedIn</a>
+<a href="mailto:your-email@example.com">Email</a>
+</div>
+
+</div>
+
+</div>
+
+<p>
+Motivated and detail‑oriented developer with strong interest in building scalable web applications and solving real‑world problems. Skilled in full‑stack development with experience in backend systems, database management, and modern web technologies.
+</p>
 
 <div class="section">
-<h2>Skills</h2>
+<h2>Education</h2>
+
+<p>
+Bachelor’s Degree in Computer Science / Information Technology  
+(Expected Graduation or Year here)
+</p>
+
+</div>
+
+
+<div class="section">
+<h2>Technical Skills</h2>
 
 <div class="skill-list">
+
 <span>C</span>
 <span>C++</span>
 <span>Java</span>
@@ -92,20 +186,23 @@ font-size:14px;
 <span>MySQL</span>
 <span>Node.js</span>
 <span>Express.js</span>
+
 </div>
 
 </div>
+
 
 <div class="section">
 <h2>Tools</h2>
 
 <ul>
-<li>Git</li>
-<li>Postman</li>
-<li>VS Code</li>
+<li>Git (Version Control)</li>
+<li>Postman (API Testing)</li>
+<li>VS Code (Development Environment)</li>
 </ul>
 
 </div>
+
 
 <div class="section">
 <h2>Languages</h2>
@@ -118,31 +215,66 @@ font-size:14px;
 
 </div>
 
+
 <div class="section">
 <h2>Projects</h2>
 
-<h3>Attendance System</h3>
-<p>
-A web-based attendance management system that allows teachers or administrators to track and manage student attendance efficiently. The system stores attendance records in a database and provides features like attendance reports, student lists, and date-wise tracking.
-</p>
+<div class="project">
+<h3>Attendance Management System</h3>
 
-<h3>ChemLab Pro</h3>
 <p>
-A laboratory management application designed to help manage chemical inventories, lab resources, and experiment data. The system improves organization and helps maintain accurate records of lab materials and experiments.
-</p>
-
-<h3>TOP (Training and Placement Officers Portal)</h3>
-<p>
-A portal developed to assist training and placement officers in managing student placement activities. It allows tracking student profiles, company visits, job opportunities, and placement records, making the recruitment process more organized and efficient.
+Developed a web‑based system to manage and monitor student attendance digitally. 
+The system allows administrators and teachers to record attendance, generate reports,
+and maintain historical attendance data using a structured database system.
 </p>
 
 </div>
+
+
+<div class="project">
+<h3>ChemLab Pro</h3>
+
+<p>
+Designed a laboratory management platform to organize chemical inventory,
+lab materials, and experiment records. The system helps laboratories
+track chemicals efficiently and maintain accurate experiment documentation.
+</p>
+
+</div>
+
+
+<div class="project">
+<h3>TOP – Training and Placement Officers Portal</h3>
+
+<p>
+Built a portal for training and placement officers to manage student placement
+data, company recruitment drives, and job opportunities. The system allows
+efficient tracking of student profiles and recruitment progress.
+</p>
+
+</div>
+
+</div>
+
 
 <div class="section">
 <h2>Contact</h2>
 
 <p>Email: your-email@example.com</p>
 <p>Location: India</p>
+
+</div>
+
+
+<div class="buttons">
+
+<button onclick="window.history.back()" class="btn">
+Back to Portfolio
+</button>
+
+<a href="resume.pdf" download class="btn">
+Download Resume
+</a>
 
 </div>
 

@@ -276,7 +276,7 @@ body.dark .portfolio-bg-text {
   /* TEXT BELOW IMAGE */
   .hero-info {
     position: absolute;
-    bottom: 7%;           /* Moved slightly downwards again */
+    bottom: -1%;           /* Moved slightly downwards again */
     top: auto;
     left: 5%;
     width: 90%;

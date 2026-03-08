@@ -75,7 +75,7 @@ function Hero() {
 <div className="resume-cta">
   <a
   href="/Portfolio/resume.html"
-  target="_blank"
+  
   rel="noopener noreferrer"
   className="cta-button"
 >
