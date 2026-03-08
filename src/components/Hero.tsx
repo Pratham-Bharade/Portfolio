@@ -6,8 +6,9 @@ function Hero() {
 
     const skills = [
     "FULL-STACK DEVELOPER",
-    "BACKEND SPECIALIST",
-    "REACT DEVELOPER",
+    "SOFTWARE PROGRAMMER",
+    "WEB ENGINEER",
+    "BACKEND DEVELOPER",
     "PROBLEM SOLVER",
     "TECH ENTHUSIAST"
   ];
@@ -63,9 +64,8 @@ function Hero() {
             ))}
           </h2>
           <p className="info-bio">
-            Specializing in building high-performance web applications 
-            with modern technologies. Focused on clean code and 
-            exceptional user experiences.
+          Versatile software developer experienced in programming, web development, and databases,
+          focused on building reliable applications and solving real-world problems.
           </p>
          <div className="info-cta">
   <a href="#projects" className="cta-button">VIEW PROJECTS</a>
