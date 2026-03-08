@@ -1,6 +1,33 @@
 import "./Hero.css";
+import { useState, useEffect } from "react";
 import m2 from "../assets/m2.jpg";
 function Hero() {
+  
+
+    const skills = [
+    "FULL-STACK DEVELOPER",
+    "BACKEND SPECIALIST",
+    "REACT DEVELOPER",
+    "PROBLEM SOLVER",
+    "TECH ENTHUSIAST"
+  ];
+
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skills.length);
+        setFade(true);
+      }, 500); // Half a second for fade out
+    }, 4000); // Change skill every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [skills.length]);
+
+
   return (
     <section className="hero" id="home">
       <div className="hero-container">
@@ -13,7 +40,7 @@ function Hero() {
           <span className="f-char">f</span>
           <span className="o2-char">O</span>
           <span className="l-char">L</span>
-          <span className="i-char">i</span>
+          <span className="i-char">i</span> 
           <span className="o3-char">O</span>
         </div>
 
@@ -30,7 +57,11 @@ function Hero() {
         {/* Hero Info (Left Side) */}
         <div className="hero-info">
           <div className="info-tag">AVAILABLE FOR HIRE</div>
-          <h2 className="info-role">FULL-STACK<br />DEVELOPER</h2>
+          <h2 className={`info-role ${fade ? "fade-in" : "fade-out"}`}>
+            {skills[currentSkillIndex].split(" ").map((word, i) => (
+              <span key={i}>{word}<br /></span>
+            ))}
+          </h2>
           <p className="info-bio">
             Specializing in building high-performance web applications 
             with modern technologies. Focused on clean code and 
@@ -39,6 +70,9 @@ function Hero() {
           <div className="info-cta">
             <a href="#projects" className="cta-button">VIEW PROJECTS</a>
             <a href="#contact" className="cta-link">GET IN TOUCH</a>
+            <div className="resume-cta">
+            <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="cta-button">EXPLORE MY RESUME</a>
+          </div>
           </div>
         </div>
 

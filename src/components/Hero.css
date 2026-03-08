@@ -137,9 +137,18 @@ body.dark .portfolio-bg-text {
   line-height: 0.9;
   color: var(--text);
   margin-bottom: 25px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02em;transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
 .info-bio {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
