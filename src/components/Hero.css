@@ -25,7 +25,7 @@ body.dark .hero {
 .portfolio-bg-text {
   position: absolute;
   top: 50%;
-  right: 0%; /* Shifted slightly rixght */
+  right: -5%; /* Shifted slightly rixght */
   transform: translateY(-50%);
   display: flex;
   justify-content: flex-end;
@@ -77,10 +77,10 @@ body.dark .portfolio-bg-text {
 .character-wrapper {
   
   position: absolute;
-  right: 1%; /* Moved slightly back to the right */
+  right: -3%; /* Moved slightly back to the right */
   bottom: -9%; /* Moved upwards slightly */
   z-index: 2;
-  width: 53%; /* Reduced size further */
+  width: 57%; /* Reduced size further */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@ body.dark .portfolio-bg-text {
 }
 
 .character-img {
-  width: 110%;
+  width: 120%;
   height: auto;
   max-height: 190vh;
   object-fit: contain;
