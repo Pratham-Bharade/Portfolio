@@ -67,13 +67,21 @@ function Hero() {
             with modern technologies. Focused on clean code and 
             exceptional user experiences.
           </p>
-          <div className="info-cta">
-            <a href="#projects" className="cta-button">VIEW PROJECTS</a>
-            <a href="#contact" className="cta-link">GET IN TOUCH</a>
-            <div className="resume-cta">
-            <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="cta-button">EXPLORE MY RESUME</a>
-          </div>
-          </div>
+         <div className="info-cta">
+  <a href="#projects" className="cta-button">VIEW PROJECTS</a>
+  <a href="#contact" className="cta-link">GET IN TOUCH</a>
+</div>
+
+<div className="resume-cta">
+  <a
+  href="/Portfolio/resume.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cta-button"
+>
+  EXPLORE MY RESUME
+</a>
+</div>
         </div>
 
         {/* Overlay Info (Right Side) */}

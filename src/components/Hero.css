@@ -114,6 +114,12 @@ body.dark .portfolio-bg-text {
   animation: infoSlideIn 1s ease-out forwards;
 }
 
+
+.resume-cta {
+  margin-top: 20px;
+}
+
+
 @keyframes infoSlideIn {
   from { transform: translateY(-40%) translateX(-30px); opacity: 0; }
   to { transform: translateY(-50%) translateX(0); opacity: 1; }
