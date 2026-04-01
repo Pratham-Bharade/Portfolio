@@ -6,234 +6,136 @@
 <title>Prathamesh Bharade - Resume</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
 }
 
 body{
-background:#e5e5e5;
-padding:40px 15px;
+  background:#e5e5e5;
+  padding:40px 15px;
 }
 
 .container{
-max-width:1000px;
-margin:auto;
-background:white;
-padding:45px;
-border-radius:10px;
-box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  max-width:1000px;
+  margin:auto;
+  background:white;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
 /* Header */
-
 .header{
-border-bottom:2px solid #ddd;
-padding-bottom:20px;
-margin-bottom:25px;
+  border-bottom:2px solid #ddd;
+  padding-bottom:20px;
+  margin-bottom:25px;
 }
 
 .name{
-font-size:34px;
-font-weight:700;
-color:#111;
+  font-size:32px;
+  font-weight:700;
 }
 
 .subtitle{
-color:#555;
-margin-top:6px;
-font-size:15px;
+  color:#555;
+  margin-top:6px;
 }
 
 .links{
-margin-top:12px;
+  margin-top:10px;
+  font-size:14px;
 }
 
 .links a{
-text-decoration:none;
-margin-right:18px;
-color:#111;
-font-weight:500;
-font-size:14px;
-transition:0.3s;
+  text-decoration:none;
+  margin-right:15px;
+  color:#111;
 }
 
 .links a:hover{
-color:#444;
+  text-decoration:underline;
 }
 
-/* Summary */
-
-.summary{
-margin-top:15px;
-font-size:15px;
-line-height:1.6;
-color:#333;
-}
-
-/* Sections */
-
+/* Section */
 .section{
-margin-top:30px;
+  margin-top:25px;
 }
 
 .section h2{
-font-size:20px;
-margin-bottom:12px;
-color:#111;
-border-left:4px solid #333;
-padding-left:10px;
+  font-size:18px;
+  margin-bottom:10px;
+  border-left:4px solid #333;
+  padding-left:8px;
 }
 
-/* Education */
-
-.education{
-list-style:none;
-margin-top:10px;
-}
-
-.education li{
-display:flex;
-justify-content:space-between;
-margin-bottom:10px;
-font-size:14px;
-color:#333;
-}
-
-.edu-year{
-color:#777;
+p{
+  font-size:14px;
+  line-height:1.6;
+  color:#333;
 }
 
 /* Skills */
-
-.skill-list{
-margin-top:10px;
+.skills{
+  margin-top:10px;
 }
 
-.skill-list span{
-display:inline-block;
-background:#f2f2f2;
-padding:7px 14px;
-margin:5px;
-border-radius:20px;
-font-size:13px;
-border:1px solid #ddd;
-transition:0.3s;
-}
-
-.skill-list span:hover{
-background:#333;
-color:white;
-border-color:#333;
-}
-
-/* Tools */
-
-.tools ul{
-padding-left:18px;
-margin-top:10px;
-}
-
-.tools li{
-margin-bottom:6px;
-font-size:14px;
-color:#333;
-}
-
-/* Languages */
-
-.languages ul{
-padding-left:18px;
-margin-top:10px;
-}
-
-.languages li{
-margin-bottom:6px;
-font-size:14px;
-color:#333;
+.skills span{
+  display:inline-block;
+  background:#f2f2f2;
+  padding:6px 12px;
+  margin:4px;
+  border-radius:20px;
+  font-size:13px;
 }
 
 /* Projects */
-
 .project{
-background:#fafafa;
-padding:15px;
-border-radius:8px;
-margin-bottom:12px;
-border:1px solid #e0e0e0;
-transition:0.3s;
-}
-
-.project:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
+  margin-bottom:12px;
 }
 
 .project h3{
-font-size:16px;
-color:#111;
-margin-bottom:6px;
+  font-size:15px;
+  margin-bottom:4px;
 }
 
-.project p{
-font-size:14px;
-color:#444;
-line-height:1.5;
-margin-bottom:6px;
+/* Lists */
+ul{
+  padding-left:18px;
+}
+
+li{
+  font-size:14px;
+  margin-bottom:5px;
 }
 
 /* Buttons */
-
 .buttons{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+  margin-top:30px;
+  text-align:center;
 }
 
 .btn{
-padding:12px 22px;
-background:#222;
-color:white;
-border:none;
-border-radius:8px;
-font-weight:600;
-cursor:pointer;
-text-decoration:none;
-transition:0.3s;
+  display:inline-block;
+  padding:10px 20px;
+  background:#222;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  margin:5px;
 }
 
 .btn:hover{
-background:#000;
+  background:#000;
 }
-
-.back-btn{
-background:#666;
-}
-
-.back-btn:hover{
-background:#444;
-}
-
-/* Responsive */
 
 @media(max-width:700px){
-
-.container{
-padding:30px 20px;
+  .container{
+    padding:25px;
+  }
 }
-
-.education li{
-flex-direction:column;
-gap:3px;
-}
-
-}
-
 </style>
 </head>
 
@@ -241,96 +143,56 @@ gap:3px;
 
 <div class="container">
 
+<!-- HEADER -->
 <div class="header">
+  <div class="name">Prathamesh Bharade</div>
+  <div class="subtitle">Java Developer | Age: 22</div>
 
-<div class="name">Prathamesh Bharade</div>
-
-<div class="subtitle">
-Fresher - Tech Explorer  | Age 22
+  <div class="links">
+    📞 9322228426 |
+    ✉️ prathambharade@gmail.com |
+    <a href="https://pratham-bharade.github.io/Portfolio/">Portfolio</a> |
+    <a href="https://github.com/Pratham-Bharade">GitHub</a> |
+    <a href="https://www.linkedin.com/in/prathamesh-bharade-02694428b/">LinkedIn</a>
+  </div>
 </div>
 
-<div class="links">
-<a href="tel:+919322228426">📞 9322228426</a>
-<a href="mailto:prathambharade@gmail.com">✉️ prathambharade@gmail.com</a>
-<a href="https://pratham-bharade.github.io/Portfolio" target="_blank">🌐 Portfolio</a>
-<a href="https://github.com/Pratham-Bharade" target="_blank">💻 GitHub</a>
-</div>
-
-<p class="summary">
-Versatile software developer experienced in programming, web development, databases, and modern web technologies. Currently pursuing a Master’s degree in Computer Applications (MCA). Passionate about building scalable applications and solving real-world problems. A results-driven team player with strong organizational skills, capable of managing multiple technical projects while delivering efficient and reliable solutions.</p>
-
-</div>
-
-<!-- Education -->
+<!-- Career Objective -->
 
 <div class="section">
+  <h2>Career Objective</h2>
 
-<h2>Education</h2>
-
-<ul class="education">
-
-<li>
-<span><strong>10th</strong> — Shree Nageshwer High School</span>
-<span class="edu-year">2019 – 2020</span>
-</li>
-
-<li>
-<span><strong>12th</strong> — Dnyanbhakti Junior College</span>
-<span class="edu-year">2020 – 2022</span>
-</li>
-
-<li>
-<span><strong>Graduation</strong> — Abasaheb Garware College</span>
-<span class="edu-year">2022 – 2025</span>
-</li>
-
-<li>
-<span><strong>Post Graduation</strong> — Abasaheb Garware College</span>
-<span class="edu-year">2025 – 2027</span>
-</li>
-
-</ul>
-
+  <p>
+    Detail-oriented and versatile developer with a strong foundation in Core Java,
+    Object-Oriented Programming (OOP), Data Structures, and database management.
+    Experienced in building web applications using RESTful APIs and CRUD operations.
+    Currently pursuing MCA (2025–2027) with a keen interest in scalable backend
+    development and modern Java frameworks.
+  </p>
 </div>
 
-<!-- Skills -->
+<!-- Technical Skills -->
 
 <div class="section">
+  <h2>Technical Skills</h2>
 
-<h2>Technical Skills</h2>
+  <p><strong>Languages:</strong> Java, Python, C, C++, JavaScript</p>
 
-<div class="skill-list">
-<span>C</span>
-<span>Java</span>
-<span>Python</span>
-<span>JavaScript</span>
-<span>c++</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>PHP</span>
-<span>MySQL</span>
-<span>Node.js</span>
-<span>Express.js</span>
-<span>MongoDB (Exploring)</span>
-<span>React.js (Exploring)</span>
-</div>
+  <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+
+  <p><strong>Backend:</strong> Node.js, Express.js, PHP</p>
+
+  <p><strong>Database:</strong> MySQL</p>
+
+  <p><strong>Core Concepts:</strong> OOP, Data Structures, REST APIs, CRUD Operations</p>
+
+  <p><strong>Tools:</strong> Git, Postman, VS Code</p>
+
+  <p><strong>Currently Exploring:</strong> MongoDB, React.js, Spring Boot</p>
 
 </div>
 
-<!-- Tools -->
-
-<div class="section tools">
-
-<h2>Tools</h2>
-
-<ul>
-<li>Git – Version Control</li>
-<li>Postman – API Testing</li>
-<li>VS Code – Development Environment</li>
-</ul>
-
-</div>
-
+<!-- PROJECTS -->
 <!-- Projects -->
 
 <div class="section">
@@ -338,13 +200,14 @@ Versatile software developer experienced in programming, web development, databa
 <h2>Projects</h2>
 
 <div class="project">
+
 <h3>TOP – Training and Placement Officers Portal</h3>
 
 <p>
 Web-based platform designed to assist Training and Placement Officers in managing student placement activities, recruitment drives, and job opportunities.
 </p>
 
-<p><strong>Role:</strong> Full‑Stack Developer</p>
+<p><strong>Role:</strong> Full-Stack Developer</p>
 
 <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
 
@@ -355,6 +218,7 @@ Web-based platform designed to assist Training and Placement Officers in managin
 </div>
 
 <div class="project">
+
 <h3>Attendance Management System</h3>
 
 <p>
@@ -372,6 +236,7 @@ Digital attendance tracking system for educational institutions that allows teac
 </div>
 
 <div class="project">
+
 <h3>ChemLab Pro</h3>
 
 <p>
@@ -389,34 +254,53 @@ Laboratory management system designed to organize chemical inventory, monitor la
 </div>
 
 </div>
-
-<!-- Languages -->
-
-<div class="section languages">
-
-<h2>Languages</h2>
-
-<ul>
-<li>English</li>
-<li>Marathi</li>
-<li>Hindi</li>
-</ul>
-
+<!-- EDUCATION -->
+<div class="section">
+  <h2>Education</h2>
+  <ul>
+    <li>MCA – Abasaheb Garware College (2025–2027)</li>
+    <li>B.Sc – Abasaheb Garware College (2022–2025)</li>
+    <li>HSC – Dnyanbhakti Junior College (2020–2022)</li>
+    <li>SSC – Shree Nageshwer High School (2019–2020)</li>
+  </ul>
 </div>
 
-<!-- Buttons -->
-
-<div class="buttons">
-
-<button onclick="window.history.back()" class="btn back-btn">
-Back to Portfolio
-</button>
-
-<a href="resume.pdf" download class="btn">
-Download Resume
-</a>
-
+<!-- EXPERIENCE -->
+<div class="section">
+  <h2>Experience</h2>
+  <p>Fresher</p>
 </div>
+
+<!-- SOFT SKILLS -->
+<div class="section">
+  <h2>Soft Skills</h2>
+  <ul>
+    <li>Effective Communication</li>
+    <li>Team Collaboration</li>
+    <li>Adaptability & Quick Learning</li>
+  </ul>
+</div>
+
+<!-- LANGUAGES -->
+<div class="section">
+  <h2>Languages</h2>
+  <ul>
+    <li>English</li>
+    <li>Marathi</li>
+    <li>Hindi</li>
+  </ul>
+</div>
+
+<!-- DECLARATION -->
+<div class="section">
+  <h2>Declaration</h2>
+  <p>
+    I hereby declare that the information provided above is true and correct to the best of my knowledge.
+  </p>
+</div>
+
+<!-- BUTTONS -->
+
 
 </div>
 
