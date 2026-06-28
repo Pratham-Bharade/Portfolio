@@ -101,7 +101,7 @@ function Contact() {
           <div className="social-links">
             <button onClick={() => window.open("https://github.com/pratham-bharade", "_blank")}> GitHub </button>
             <button onClick={() => window.open("https://linkedin.com/in/prathamesh-bharade-02694428b", "_blank")}>LinkedIn</button>
-            <button onClick={() => window.open("https://instagram.com/pratham_bharade", "_blank")}>Instagram</button>
+            <button onClick={() => window.open("https://www.instagram.com/mee_ahee/", "_blank")}>Instagram</button>
           </div>
         </div>
       </div>
