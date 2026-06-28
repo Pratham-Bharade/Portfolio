@@ -21,7 +21,7 @@ function About() {
           <div className="about-left">
   <p>
     With a solid background in Computer Applications, I have developed strong 
-    expertise in C, C++, Java, Python, SQL, and modern web development.
+    expertise in C/C++, Java, Python, SQL, and modern web development.
   </p>
 
   <p>
@@ -34,6 +34,11 @@ function About() {
     I approach every project with discipline, clarity, and a mindset focused 
     on both technical excellence and team success.
   </p>
+
+  <p>As an MCA student and aspiring Java Developer,
+     I am committed to continuous learning and building practical software solutions. 
+     I look forward to contributing to meaningful projects while enhancing my technical skills
+      and growing as a software professional.</p>
 </div>
 
           {/* RIGHT SIDE */}
@@ -41,23 +46,28 @@ function About() {
 
             <div className="about-box">
               <h3>Education</h3>
-              <p>MSc Computer Applications</p>
+              <p><b><h2>Master of Computer Applications (MCA) </h2></b></p>
+
+Currently pursuing MCA with a focus on
+Java Programming, Database Management,
+and Software Development.
             </div>
 
             <div className="about-box">
               <h3>Experience</h3>
-              <p>Full‑Stack Web Projects</p>
+              <p>Fresher | Early Career Developer
+Focused on Java & Full-Stack Development. Ready to learn and contribute.</p>
             </div>
 
             <div className="about-box">
               <h3>Core Strength</h3>
-              <p>Backend Systems & Database Design</p>
+              <p>Languages Proficiency  : Java • Python • C • C++ • Sql</p>
             </div>
 
-            <div className="about-box">
+            {/* <div className="about-box">
               <h3>Mindset</h3>
               <p>Consistency • Learning • Innovation</p>
-            </div>
+            </div> */}
 
           </div>
 
