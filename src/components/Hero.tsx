@@ -6,11 +6,12 @@ function Hero() {
 
     const skills = [
     "FULL-STACK DEVELOPER",
-    "SOFTWARE PROGRAMMER",
-    "WEB ENGINEER",
+    "SOFTWARE ENGINEER",
+    "PYTHON DEVELOPER",
     "BACKEND DEVELOPER",
     "PROBLEM SOLVER",
-    "TECH ENTHUSIAST"
+    "TECH ENTHUSIAST",
+    "JAVA DEVELOPER"
   ];
 
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -64,8 +65,7 @@ function Hero() {
             ))}
           </h2>
           <p className="info-bio">
-          Versatile software developer experienced in programming, web development, and databases,
-          focused on building reliable applications and solving real-world problems.
+            Versatile software developer experienced in programming, web development, and databases, focused on building reliable applications and solving real-world problems.
           </p>
          <div className="info-cta">
   <a href="#projects" className="cta-button">VIEW PROJECTS</a>

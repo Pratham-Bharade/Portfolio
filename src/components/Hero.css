@@ -75,12 +75,11 @@ body.dark .portfolio-bg-text {
 
 /* Character Image */
 .character-wrapper {
-  
   position: absolute;
-  right: -3%; /* Moved slightly back to the right */
-  bottom: -9%; /* Moved upwards slightly */
+  right: -3%;
+  bottom: -9%;
   z-index: 2;
-  width: 57%; /* Reduced size further */
+  width: 57%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -247,12 +246,12 @@ body.dark .portfolio-bg-text {
     top: -58%;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;           /* Increased width */
+    width: 90%;
     z-index: 5;
   }
 
   .character-img {
-    max-height: 490px;    /* Increased max-height */
+    max-height: 490px;
   }
 
   /* NAME OVER IMAGE */
