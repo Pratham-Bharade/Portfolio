@@ -6,8 +6,8 @@ function Hero() {
 
     const skills = [
     "FULL-STACK DEVELOPER",
-    "SOFTWARE ENGINEER",
     "PYTHON DEVELOPER",
+    "SOFTWARE ENGINEER",
     "BACKEND DEVELOPER",
     "PROBLEM SOLVER",
     "TECH ENTHUSIAST",
@@ -65,7 +65,7 @@ function Hero() {
             ))}
           </h2>
           <p className="info-bio">
-            Versatile software developer experienced in programming, web development, and databases, focused on building reliable applications and solving real-world problems.
+            Versatile software developer experienced in programming,development, and ML, focused on building reliable applications and solving real-world problems.
           </p>
          <div className="info-cta">
   <a href="#projects" className="cta-button">VIEW PROJECTS</a>
@@ -74,13 +74,12 @@ function Hero() {
 
 <div className="resume-cta">
   <a
-  href="/Portfolio/resume.html"
-  
-  rel="noopener noreferrer"
-  className="cta-button"
->
-  EXPLORE MY RESUME
-</a>
+    href="/Portfolio/resume.html"
+    rel="noopener noreferrer"
+    className="cta-button"
+  >
+    EXPLORE MY RESUME
+  </a>
 </div>
         </div>
 
