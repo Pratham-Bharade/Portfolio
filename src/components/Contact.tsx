@@ -132,16 +132,16 @@ function Contact() {
                 <div className="channel-box-content">
                   <span className="channel-label">Email Address</span>
                   <a
-                    href="mailto:prathameshbharade64@gmail.com"
+                    href="mailto:prathambharade@gmail.com"
                     className="channel-value email-val"
                   >
-                    prathameshbharade64@gmail.com
+                    prathambharade@gmail.com
                   </a>
                 </div>
                 <button
                   type="button"
                   className="channel-copy-btn"
-                  onClick={() => handleCopy("prathameshbharade64@gmail.com", "email")}
+                  onClick={() => handleCopy("prathambharade@gmail.com", "email")}
                   title="Copy email"
                 >
                   {copiedField === "email" ? (
@@ -161,14 +161,14 @@ function Contact() {
                 </div>
                 <div className="channel-box-content">
                   <span className="channel-label">Phone / WhatsApp</span>
-                  <a href="tel:+919356567431" className="channel-value">
-                    +91 93565 67431
+                  <a href="tel:+919322228426" className="channel-value">
+                    +91 932222 8426
                   </a>
                 </div>
                 <button
                   type="button"
                   className="channel-copy-btn"
-                  onClick={() => handleCopy("+919356567431", "phone")}
+                  onClick={() => handleCopy("+919322228426", "phone")}
                   title="Copy phone"
                 >
                   {copiedField === "phone" ? (
