@@ -573,6 +573,24 @@ body.dark .submit-message-btn {
   flex-shrink: 0;
 }
 
+.form-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.error-icon {
+  flex-shrink: 0;
+}
+
 /* ================= */
 /* MOBILE RESPONSIVE */
 /* ================= */
